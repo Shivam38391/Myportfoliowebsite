@@ -1,0 +1,156 @@
+<!-- porfolio section..... -->
+
+{% load static %}
+<div class="section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ml-auto mr-auto">
+          <div class="h4 text-center mb-4 title">Portfolio</div>
+          <div class="nav-align-center">
+            <ul class="nav nav-pills nav-pills-primary" role="tablist">
+              <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#graphic-design" role="tablist"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Photography" role="tablist"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content gallery mt-5">
+
+
+        <!-- webdevelopment projects -->
+
+        <div class="tab-pane active" id="web-development">
+          <div class="ml-auto mr-auto">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="{{webdev_1.link}}">
+                    <figure class="cc-effect"><img src="{{webdev_1.image.url}}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{webdev_1.project_name}}</div>
+                        <p>{{webdev_1.description}}</p>
+                      </figcaption>
+                    </figure></a></div>
+                <!-- <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
+                    <figure class="cc-effect"><img src="/static/images/project-2.jpg" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">Startup Project</div>
+                        <p>Web Development</p>
+                      </figcaption>
+                    </figure></a></div> -->
+              </div>
+              <div class="col-md-6">
+                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="{{webdev_2.link}}">
+                    <figure class="cc-effect"><img src="{{webdev_2.image.url}}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{webdev_2.project_name}}</div>
+                        <p>{{webdev_2.description}}</p>
+                      </figcaption>
+                    </figure></a></div>
+                <!-- <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
+                    <figure class="cc-effect"><img src="/static/images/project-4.jpg" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">Web Advertising Project</div>
+                        <p>Web Development</p>
+                      </figcaption>
+                    </figure></a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of webdevelopment projects -->
+
+        <!-- graphic designing projects -->
+          
+        
+          
+
+        <div class="tab-pane" id="graphic-design" role="tabpanel">
+          <div class="ml-auto mr-auto">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
+                    <figure class="cc-effect"><img src="{{personal_1.image.url}}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{personal_1.project_name | title}}</div>
+                        <p>{{personal_1.description | title}}</p>
+                      </figcaption>
+                    </figure></a></div>
+                <!-- <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
+                    <figure class="cc-effect"><img src="" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{personal.project_name | title}}</div>
+                        <p>{{personal.description | title}}</p>
+                      </figcaption>
+                    </figure></a></div> -->
+              </div>
+              <div class="col-md-6">
+                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
+                    <figure class="cc-effect"><img src="{{personal_2.image.url}}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{personal_2.project_name | title}}</div>
+                        <p>{{personal_2.description | title}}</p>
+                      </figcaption>
+                    </figure></a></div>
+                <!-- <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
+                    <figure class="cc-effect"><img src="{% static 'images/graphic-design-4.jpg' %}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">Abstract Line</div>
+                        <p>Graphic Design</p>
+                      </figcaption>
+                    </figure></a></div> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- end of graphic designing projects -->
+
+        <!-- photography projects -->
+
+        
+        <div class="tab-pane" id="Photography" role="tabpanel">
+          <div class="ml-auto mr-auto">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="{{selfphoto1.link}}">
+                    <figure class="cc-effect"><img src="{{selfphoto1.image.url}}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{selfphoto1.photo_name}}"</div>
+                        <p>{{selfphoto1.photo_caption}}"</p>
+                      </figcaption>
+                    </figure></a></div>
+                <!-- <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                    <figure class="cc-effect"><img src="{% static 'images/photography-3.jpg' %}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">Wedding Photoshoot</div>
+                        <p>Photography</p>
+                      </figcaption>
+                    </figure></a></div> -->
+              </div>
+              <div class="col-md-6">
+                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="{{selfphoto2.link}}">
+                    <figure class="cc-effect"><img src="{{selfphoto2.image.url}}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">{{selfphoto2.photo_name}}</div>
+                        <p>{{selfphoto2.photo_caption}}</p>
+                      </figcaption>
+                    </figure></a></div>
+                <!-- <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                    <figure class="cc-effect"><img src="{% static 'images/photography-4.jpg' %}" alt="Image"/>
+                      <figcaption>
+                        <div class="h4">Nature Photoshoot</div>
+                        <p>Photography</p>
+                      </figcaption>
+                    </figure></a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end of photography projects -->
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,91 @@
+<!-- contact section -->
+
+<div class="section" id="contact">
+    <div class="cc-contact-information" style="background-image: url(/static/content/images/staticmap.png)">
+      <div class="container">
+        <div class="cc-contact">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="card mb-0" data-aos="zoom-in">
+                <div class="h4 text-center title">Contact Me</div>
+                
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <form action="{% url 'contact' %}" method="POST" novalidate>
+                        
+                        {% csrf_token %}
+
+                        <div class="p pb-3"><strong>Feel free to contact me </strong></div>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div id="index-alert"
+                            class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-dismissible bg-{% if message.tags == 'success' %}success{% elif message.tags == 'danger' %}danger{% elif message.tags == 'primary' %}primary{% endif %}">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong class="text-black"> {% if message.tags == 'success' %}Success{% elif message.tags == 'danger' %} Error {% elif message.tags == 'primary' %}Message{% endif %} ! </strong><span class="text-black">{{message}}</span>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="row mb-3">
+                          <div class="col">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+                          
+                              {{form.fullname}}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
+                              {{form.subject}}
+
+                              <!-- <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/> -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                              {{form.email}}
+                              <!-- <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/> -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <div class="form-group">
+                              {{form.message}}
+                              
+                              <!-- <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea> -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <button class="btn btn-primary" type="submit">Send</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <p class="mb-0"><strong>Address </strong></p>
+                      <p class="pb-2">{{about.address | title}}</p>
+                      <p class="mb-0"><strong>Phone</strong></p>
+                      <p class="pb-2">{{about.phone}}</p>
+                      <p class="mb-0"><strong>Email</strong></p>
+                      <p>{{about.email}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
